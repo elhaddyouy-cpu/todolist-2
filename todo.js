@@ -6,7 +6,17 @@ console.log(input, button, ul);
 
 button.addEventListener("click", () => {
   console.log(input.value);
-  const newLi = document.createElement("li");
-  newLi.innerText = input.value;
-  ul.appendChild(newLi);
+  if (input.value.trim()) {
+    const newLi = document.createElement("li");
+    const deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "Supprimer";
+    deleteBtn.addEventListener("click", () => {
+      r;
+    });
+    newLi.innerText = input.value;
+    newLi.appendChild(deleteBtn);
+    ul.appendChild(newLi);
+    input.value = "";
+    input.focus();
+  }
 });
